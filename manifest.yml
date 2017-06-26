@@ -1,0 +1,4 @@
+---
+applications:
+- name: httpsession-gemfire-demo
+  path: target/HttpSessionCaching-Webapp-0.0.1-SNAPSHOT.war

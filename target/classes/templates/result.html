@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/index.css}" />
+    <script th:src="@{/index.js}"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+
+
+        <!--<form class="register-form">-->
+        <!--<input type="text" placeholder="name"/>-->
+        <!--<input type="password" placeholder="password"/>-->
+        <!--<input type="text" placeholder="email address"/>-->
+        <!--<button>create</button>-->
+        <!--<p class="message">Already registered? <a href="#">Sign In</a></p>-->
+        <!--</form>-->
+        <h3>Name: </h3><p th:text="${#httpSession.getAttribute('name')}" th:unless="${#httpSession == null}" ></p>
+</body>
+</html>

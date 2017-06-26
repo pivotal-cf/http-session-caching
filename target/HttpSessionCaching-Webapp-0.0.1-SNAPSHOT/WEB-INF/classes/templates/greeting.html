@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/index.css}" />
+    <script src="index.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<div class="login-page">
+    <div class="form">
+        <!--<form class="register-form">-->
+        <!--<input type="text" placeholder="name"/>-->
+        <!--<input type="password" placeholder="password"/>-->
+        <!--<input type="text" placeholder="email address"/>-->
+        <!--<button>create</button>-->
+        <!--<p class="message">Already registered? <a href="#">Sign In</a></p>-->
+        <!--</form>-->
+        <form action="#" th:action="@{/greeting}" th:object="${greeting}" method="post">
+            <p>Id: <input type="text" th:field="*{id}" /></p>
+            <p>Message: <input type="text" th:field="*{content}" /></p>
+            <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+        </form>
+    </div>
+</div>
+</body>
+</html>

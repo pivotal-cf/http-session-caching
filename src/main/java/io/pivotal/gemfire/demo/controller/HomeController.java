@@ -26,25 +26,8 @@ public class HomeController{
         if (hits == null) {
             hits = 0;
         }
-        model.addAttribute("greeting", new Greeting());
         httpSession.setAttribute("hits", ++hits);
         return "index";
    }
-
-  @GetMapping("/greeting")
-  public String greeting(Model model) {
-    model.addAttribute("greeting", new Greeting());
-    return "greeting";
-  }
-
-
-  @PostMapping("/greeting")
-  public String greetingSubmit(@ModelAttribute Greeting greeting, HttpSession httpSession) {
-    httpSession.setAttribute("name", greeting.getId());
-    httpSession.setAttribute("message", greeting.getContent());
-    LOGGER.info("Got the session object :" + httpSession.getAttribute("name"));
-    return "result";
-  }
-
 
 }

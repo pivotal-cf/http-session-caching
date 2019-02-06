@@ -22,5 +22,5 @@
 # Gradle
 /build/
 .gradle
-
+.idea
 /target/

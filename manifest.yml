@@ -1,4 +1,5 @@
 ---
 applications:
 - name: httpsession-gemfire-demo
-  path: build/libs/http-session-caching-0.0.1.jar
+  path: build/libs/http-session-caching-0.0.1.war
+  buildpack: java_buildpack_offline

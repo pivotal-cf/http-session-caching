@@ -13,23 +13,10 @@
  * limitations under the License.
  */
 
-
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.3.RELEASE")
-    }
-}
-
 apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'idea'
-apply plugin: 'org.springframework.boot'
-apply plugin: 'io.spring.dependency-management'
+apply plugin: 'war'
 
-jar {
+war {
     baseName = 'http-session-caching'
     version =  '0.0.1'
 }
@@ -42,9 +29,8 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web")
-    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
-    compile("org.springframework.boot:spring-boot-devtools")
-    compile("org.springframework.boot:spring-boot-starter-test")
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf:1.5.3.RELEASE")
+    providedCompile("org.springframework.boot:spring-boot-starter-tomcat:1.5.3.RELEASE")
+    testCompile("org.springframework.boot:spring-boot-starter-test:1.5.3.RELEASE")
     testCompile("junit:junit")
 }

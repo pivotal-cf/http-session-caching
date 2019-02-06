@@ -9,8 +9,8 @@ The username is stored in the http session.
 ## How to confirm Session State Caching is working
 
 
-1. Run `./gradlew clean build`. This will generate a `war'
-file. 
+1. Run `./gradlew clean build`. This will generate a `jar`
+file in `build/libs/`
 1. Using manifest.yml you can `cf push` the `jar` file.
 1. While pusing the application please ensure you are 
 using the java-buildpack version which supports Session State Caching(SSC), please

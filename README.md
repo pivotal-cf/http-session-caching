@@ -66,7 +66,7 @@ tags:            session-replication
 plan:            dev-plan
 description:     Pivotal Cloud Cache offers the ability to deploy a GemFire cluster as a service in Pivotal Cloud Foundry.
 documentation:
-dashboard:       http://<YOUR DOMAIN>.cf-app.com/pulse
+dashboard:       https://<YOUR DOMAIN>.cf-app.com/pulse
 
 bound apps:
 name                       binding name

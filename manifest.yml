@@ -2,4 +2,8 @@
 applications:
 - name: http-session-caching
   path: build/libs/http-session-caching-0.0.1.war
-  buildpack: java_buildpack_offline
+  buildpack: new_java_buildpack
+  services:
+  - tls-session-replication
+comment:
+  - service-no-tls
